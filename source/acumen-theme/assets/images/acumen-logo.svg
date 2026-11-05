@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 120" width="100%" height="100%">
+  <defs>
+    <linearGradient id="acumenGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#002664"/>
+      <stop offset="100%" stop-color="#0A4FA8"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Acumen Wordmark -->
+  <text x="15" y="75" font-family="'Arial Black', 'Montserrat', 'Segoe UI', sans-serif" font-size="76" font-style="italic" font-weight="900" fill="url(#acumenGrad)" letter-spacing="-1">Acumen</text>
+  
+  <!-- Precision Engineering Accents -->
+  <path d="M 180 88 Q 280 84, 430 88" stroke="#0A4FA8" stroke-width="2" fill="none" opacity="0.6"/>
+  <circle cx="435" cy="88" r="3" fill="#F59E0B" />
+  
+  <!-- Tagline -->
+  <text x="182" y="106" font-family="'Georgia', 'Times New Roman', serif" font-size="20" font-style="italic" font-weight="600" fill="#0A4FA8" letter-spacing="0.5">Turnkey Project Solutions</text>
+</svg>

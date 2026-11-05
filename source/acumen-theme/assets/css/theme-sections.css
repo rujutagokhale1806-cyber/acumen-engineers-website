@@ -1,0 +1,717 @@
+/**
+ * Acumen Theme — Additional Component Styles
+ * Post cards, service cards, sector cards, gallery,
+ * contact, single CPT layouts, intro grid, 404, etc.
+ */
+
+/* =============================================
+   POST GRID & CARDS
+   ============================================= */
+.acumen-post-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 28px;
+}
+.acumen-post-card {
+  background: #fff;
+  border: 1px solid var(--acumen-border);
+  border-radius: var(--acumen-radius);
+  overflow: hidden;
+  transition: var(--acumen-transition);
+}
+.acumen-post-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--acumen-shadow-lg);
+}
+.post-card-thumb img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+}
+.post-card-body {
+  padding: 24px;
+}
+.post-card-meta {
+  font-size: 13px;
+  color: var(--acumen-muted);
+  margin-bottom: 10px;
+}
+.post-card-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+.post-card-title a {
+  color: var(--acumen-navy);
+  text-decoration: none;
+}
+.post-card-title a:hover {
+  color: var(--acumen-blue);
+}
+.post-card-excerpt {
+  color: var(--acumen-muted);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+/* =============================================
+   PAGE CONTENT (prose)
+   ============================================= */
+.acumen-page-content {
+  color: var(--acumen-charcoal);
+  line-height: 1.75;
+  font-size: 1.05rem;
+}
+.acumen-page-content h1,
+.acumen-page-content h2,
+.acumen-page-content h3,
+.acumen-page-content h4 {
+  color: var(--acumen-navy);
+  margin-top: 1.5em;
+  margin-bottom: 0.6em;
+}
+.acumen-page-content p { margin-bottom: 1.2em; }
+.acumen-page-content ul,
+.acumen-page-content ol {
+  margin: 0 0 1.2em 1.5em;
+}
+.acumen-page-content img {
+  max-width: 100%;
+  border-radius: var(--acumen-radius);
+}
+
+/* =============================================
+   INTRO GRID
+   ============================================= */
+.intro-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 60px;
+  align-items: start;
+}
+.intro-value-props {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.value-prop-card {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  background: var(--acumen-bg);
+  border: 1px solid var(--acumen-border);
+  border-radius: var(--acumen-radius);
+  padding: 20px 18px;
+}
+.value-prop-icon {
+  width: 48px;
+  height: 48px;
+  background: #EFF6FF;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--acumen-blue);
+  flex-shrink: 0;
+}
+.value-prop-card h4 {
+  color: var(--acumen-navy);
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+.value-prop-card p {
+  font-size: 0.9rem;
+  color: var(--acumen-slate);
+  margin: 0;
+  line-height: 1.55;
+}
+.intro-certs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 20px;
+}
+.cert-badge {
+  background: #EFF6FF;
+  color: var(--acumen-blue);
+  border: 1px solid #DBEAFE;
+  font-size: 12.5px;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: 4px;
+}
+
+/* =============================================
+   SERVICE CARDS
+   ============================================= */
+.acumen-services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.service-card {
+  background: #fff;
+  border: 1px solid var(--acumen-border);
+  border-radius: var(--acumen-radius);
+  padding: 28px 22px;
+  transition: var(--acumen-transition);
+  position: relative;
+}
+.service-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--acumen-shadow-lg);
+  border-color: var(--acumen-blue);
+}
+.service-card-icon {
+  width: 52px;
+  height: 52px;
+  background: #EFF6FF;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+  color: var(--acumen-blue);
+}
+.service-card-icon svg { width: 28px; height: 28px; }
+.service-card-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--acumen-navy);
+  margin-bottom: 10px;
+}
+.service-card-desc {
+  font-size: 0.9rem;
+  color: var(--acumen-slate);
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+.service-card-link {
+  font-size: 13.5px;
+  font-weight: 700;
+  color: var(--acumen-blue);
+  text-decoration: none;
+}
+.service-card-link:hover { color: var(--acumen-blue-hover); }
+
+/* =============================================
+   SECTOR / INDUSTRY CARDS
+   ============================================= */
+.acumen-sectors-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+}
+.sector-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(255,255,255,0.07);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: var(--acumen-radius);
+  padding: 24px 16px;
+  text-align: center;
+  transition: var(--acumen-transition);
+  cursor: default;
+}
+.sector-card:hover {
+  background: rgba(245,158,11,0.12);
+  border-color: rgba(245,158,11,0.35);
+  transform: translateY(-3px);
+}
+.sector-card-icon {
+  width: 56px;
+  height: 56px;
+  background: rgba(255,255,255,0.1);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12px;
+  color: #94A3B8;
+}
+.sector-card:hover .sector-card-icon { color: var(--acumen-accent); background: rgba(245,158,11,0.15); }
+.sector-card-icon svg { width: 28px; height: 28px; }
+.sector-card-title {
+  font-size: 13px;
+  font-weight: 700;
+  color: #CBD5E1;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.sector-card:hover .sector-card-title { color: var(--acumen-accent); }
+
+/* =============================================
+   STATS GRID
+   ============================================= */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 32px;
+  text-align: center;
+}
+.acumen-stats-section {
+  background: linear-gradient(135deg, var(--acumen-navy-dark) 0%, var(--acumen-navy) 100%);
+  color: #fff;
+}
+.stat-item { padding: 16px; }
+.stat-number {
+  display: block;
+  font-size: 3rem;
+  font-weight: 900;
+  color: var(--acumen-accent);
+  line-height: 1;
+  margin-bottom: 8px;
+}
+.stat-label {
+  font-size: 13.5px;
+  color: #CBD5E1;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 600;
+}
+
+/* =============================================
+   CLIENTS TICKER / GRID
+   ============================================= */
+.clients-ticker-wrap {
+  overflow: hidden;
+  width: 100%;
+  padding: 16px 0;
+}
+.clients-ticker {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+}
+.client-chip {
+  background: var(--acumen-bg);
+  border: 1px solid var(--acumen-border);
+  border-radius: 30px;
+  padding: 8px 18px;
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--acumen-charcoal);
+  white-space: nowrap;
+}
+.clients-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+}
+.client-name-card {
+  background: #fff;
+  border: 1px solid var(--acumen-border);
+  border-radius: var(--acumen-radius);
+  padding: 20px;
+  text-align: center;
+  font-weight: 700;
+  font-size: 14px;
+  color: var(--acumen-navy);
+  transition: var(--acumen-transition);
+}
+.client-name-card:hover {
+  border-color: var(--acumen-blue);
+  box-shadow: var(--acumen-shadow);
+}
+
+/* =============================================
+   PROJECT CARDS
+   ============================================= */
+.acumen-projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.project-card {
+  background: #fff;
+  border: 1px solid var(--acumen-border);
+  border-radius: var(--acumen-radius);
+  overflow: hidden;
+  transition: var(--acumen-transition);
+}
+.project-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--acumen-shadow-lg);
+}
+.project-card-img {
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  background-color: var(--acumen-navy);
+}
+.project-card-body {
+  padding: 20px;
+}
+.project-card-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.project-card-title a {
+  color: var(--acumen-navy);
+  text-decoration: none;
+}
+.project-card-title a:hover { color: var(--acumen-blue); }
+.project-card-excerpt {
+  font-size: 0.9rem;
+  color: var(--acumen-slate);
+  margin-bottom: 14px;
+  line-height: 1.55;
+}
+
+/* =============================================
+   GALLERY
+   ============================================= */
+.gallery-filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 32px;
+}
+.gallery-filter-btn {
+  background: #fff;
+  border: 1px solid var(--acumen-border);
+  border-radius: 30px;
+  padding: 8px 18px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--acumen-charcoal);
+  cursor: pointer;
+  transition: var(--acumen-transition);
+}
+.gallery-filter-btn:hover,
+.gallery-filter-btn.active {
+  background: var(--acumen-blue);
+  border-color: var(--acumen-blue);
+  color: #fff;
+}
+.acumen-gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 16px;
+}
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--acumen-radius);
+  aspect-ratio: 4/3;
+  background: var(--acumen-navy);
+}
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+.gallery-item:hover img { transform: scale(1.05); }
+.gallery-item-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(10, 37, 64, 0.7);
+  display: flex;
+  align-items: flex-end;
+  padding: 16px;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+.gallery-item:hover .gallery-item-overlay { opacity: 1; }
+.gallery-item-overlay span {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+}
+.gallery-item-link { display: block; height: 100%; }
+
+/* =============================================
+   CONTACT PAGE
+   ============================================= */
+.contact-offices-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+  margin-bottom: 0;
+}
+.contact-office-card {
+  background: #fff;
+  border: 1px solid var(--acumen-border);
+  border-radius: var(--acumen-radius);
+  padding: 28px 24px;
+  transition: var(--acumen-transition);
+}
+.contact-office-card:hover {
+  box-shadow: var(--acumen-shadow-lg);
+  border-color: var(--acumen-blue);
+}
+.contact-office-icon {
+  width: 52px;
+  height: 52px;
+  background: #EFF6FF;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+.contact-office-card h3 {
+  color: var(--acumen-navy);
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+.contact-office-card address {
+  font-style: normal;
+  color: var(--acumen-slate);
+  font-size: 14px;
+  line-height: 1.65;
+  margin-bottom: 14px;
+}
+.contact-office-phones {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 10px;
+}
+.contact-office-phones a,
+.contact-office-email {
+  color: var(--acumen-blue);
+  font-size: 14px;
+  text-decoration: none;
+  font-weight: 600;
+}
+.contact-office-phones a:hover,
+.contact-office-email:hover { color: var(--acumen-blue-hover); text-decoration: underline; }
+.contact-rfq-layout {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 60px;
+  align-items: start;
+}
+.contact-rfq-intro .section-header { margin-bottom: 24px; }
+
+/* =============================================
+   SINGLE CPT LAYOUT (Service / Industry / Project)
+   ============================================= */
+.single-cpt-layout {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: 40px;
+  align-items: start;
+}
+.sidebar-cta-card {
+  background: var(--acumen-navy);
+  color: #fff;
+  border-radius: var(--acumen-radius);
+  padding: 28px;
+}
+.sidebar-cta-card h4 {
+  color: #fff;
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+.sidebar-cta-card p {
+  color: #CBD5E1;
+  font-size: 14px;
+  line-height: 1.55;
+  margin-bottom: 20px;
+}
+.infra-feature-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.infra-feature-list li {
+  padding: 8px 0;
+  border-bottom: 1px solid var(--acumen-border);
+  color: var(--acumen-slate);
+  font-size: 0.95rem;
+}
+.infra-feature-list li:last-child { border-bottom: none; }
+.service-highlights-box {
+  background: var(--acumen-bg);
+  border: 1px solid var(--acumen-border);
+  border-radius: var(--acumen-radius);
+  padding: 24px;
+}
+.service-highlights-box h3 {
+  color: var(--acumen-navy);
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+.project-meta-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  background: var(--acumen-bg);
+  border: 1px solid var(--acumen-border);
+  border-radius: var(--acumen-radius);
+  padding: 20px;
+  margin-bottom: 28px;
+}
+.project-meta-item strong {
+  display: block;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--acumen-muted);
+  margin-bottom: 4px;
+}
+.project-meta-item span {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--acumen-navy);
+}
+
+/* =============================================
+   ABOUT PAGE
+   ============================================= */
+.about-quality-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+}
+.about-quality-card {
+  background: #fff;
+  border: 1px solid var(--acumen-border);
+  border-radius: var(--acumen-radius);
+  padding: 28px 22px;
+  text-align: center;
+  transition: var(--acumen-transition);
+}
+.about-quality-card:hover {
+  box-shadow: var(--acumen-shadow-lg);
+  border-color: var(--acumen-blue);
+}
+.about-quality-icon {
+  width: 64px;
+  height: 64px;
+  background: #EFF6FF;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 18px;
+}
+.about-quality-card h3 {
+  font-size: 1.15rem;
+  color: var(--acumen-navy);
+  margin-bottom: 12px;
+}
+.about-quality-card p {
+  font-size: 0.9rem;
+  color: var(--acumen-slate);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* =============================================
+   404 PAGE
+   ============================================= */
+.acumen-404-wrap {
+  text-align: center;
+  max-width: 560px;
+  margin: 0 auto;
+  padding: 20px;
+}
+.acumen-404-icon { margin-bottom: 20px; }
+.acumen-404-code {
+  font-size: 6rem;
+  font-weight: 900;
+  color: var(--acumen-navy);
+  margin: 0 0 10px;
+  line-height: 1;
+}
+.acumen-404-msg {
+  color: var(--acumen-slate);
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+.content-none-wrap {
+  text-align: center;
+  padding: 60px 20px;
+  max-width: 540px;
+  margin: 0 auto;
+}
+.content-none-wrap h2 {
+  color: var(--acumen-navy);
+  margin: 16px 0 12px;
+}
+.content-none-wrap p {
+  color: var(--acumen-muted);
+  margin-bottom: 24px;
+}
+.content-none-icon { margin-bottom: 8px; }
+
+/* Acumen Engineers – Premium Service Card Refinements */
+.acumen-post-card {
+    background: #ffffff;
+    border: 1px solid #e3e9f0;
+    border-radius: 12px;
+    overflow: hidden;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 16px rgba(8, 35, 63, 0.05);
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.acumen-post-card:hover {
+    transform: translateY(-6px);
+    border-color: #f59e0b;
+    box-shadow: 0 14px 30px rgba(8, 35, 63, 0.12);
+}
+
+.post-card-body {
+    padding: 28px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.post-card-title {
+    font-size: 21px;
+    line-height: 1.4;
+    font-weight: 700;
+    color: #0b2945;
+    margin: 0 0 14px;
+}
+
+.post-card-title a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.post-card-title a:hover {
+    color: #d97706;
+}
+
+.post-card-excerpt {
+    color: #64748b;
+    font-size: 16px;
+    line-height: 1.75;
+    flex-grow: 1;
+}
+
+.post-card-excerpt a {
+    display: inline-block;
+    margin-top: 18px;
+    padding: 11px 22px;
+    background: #0b55a1;
+    color: #ffffff;
+    border-radius: 7px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background 0.2s ease;
+}
+
+.post-card-excerpt a:hover {
+    background: #f59e0b;
+    color: #08233f;
+}
